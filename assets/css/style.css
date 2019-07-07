@@ -1,0 +1,97 @@
+@font-face {
+    font-family: custom;
+    src: url(../fonts/yeezy_tstar-bold-webfont.ttf);
+}
+
+body {
+    font-family: custom;
+    font-size: 20px;
+    line-height: 1.5;
+    background: rgb(255, 26, 75);
+    text-transform: uppercase;
+    /* letter-spacing: 1px; */
+}
+
+.game {
+    background: rgb(164, 164, 164);
+    padding: 10px 30px 20px 30px;
+    box-shadow: 15px 15px 0px rgba(121, 62, 62, 0.4);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.game-content {
+    position: relative;
+}
+
+.question{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-decoration: underline
+    /* border-bottom: 2px solid black; */
+    /* width: 400px; */
+}
+
+ul{
+    list-style-type: none;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:75px;
+}
+
+li {
+    padding-left: 42%; 
+
+}
+
+.choice {
+    margin-left: 10px;
+    transition-property: background;
+    transition-duration: 1s;
+}
+
+li:hover {
+    background: lightgray;
+}
+
+li:active{
+    /* color: rgb(0, 174, 130); */
+    color: rgb(255, 87, 112);
+    /* background: rgb(0, 142, 106); */
+}
+li:focus{
+    
+    color: rgb(0, 174, 130);
+}
+
+.start {
+    /* margin-left: 36.5%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-btn {
+    background: lightgray;
+    margin: 90px 110px 130px 110px;
+}
+
+.start-btn:hover {
+    background: white;
+}
+
+.timer {
+    position: absolute;
+    right: 1px;
+    bottom: -70px;
+}
+
+.time-left {
+    margin-left: 10px;
+}
