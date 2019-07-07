@@ -27,6 +27,7 @@ h1 {
 
 .game-content {
     position: relative;
+    
 }
 
 .question{
@@ -82,7 +83,16 @@ li:focus{
     margin: 90px 110px 130px 110px;
 }
 
+.restart-btn {
+    background: lightgray;
+    margin: 30px 10px 30px 10px;
+}
+
 .start-btn:hover {
+    background: white;
+}
+
+.restart-btn:hover {
     background: white;
 }
 
@@ -94,4 +104,15 @@ li:focus{
 
 .time-left {
     margin-left: 10px;
+}
+
+.counts {
+    margin-left: 1%;
+}
+
+.count {
+    padding-left: 45%;
+    /* display: flex;*/   
+    /* align-items: center;*/
+    /* justify-content: right;  */
 }
