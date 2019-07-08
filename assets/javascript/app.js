@@ -79,7 +79,7 @@ window.onload = function(){
             time = 30                           // reset timer
             $(".time-left").text(timeConverter(time))
             clearInterval(qTimer)
-            qTimer = setInterval(count, 500)
+            qTimer = setInterval(count, 1000)
             choiceLock = false                  // unlock answer select
         }
         else {
@@ -142,14 +142,14 @@ window.onload = function(){
                 $(this).css("color", "rgb(0, 174, 130)")
                 console.log("correct")
                 var correctChoice = ".li-" + q.correct
-                $(correctChoice).fadeToggle(1000).fadeToggle(1000).fadeToggle(1000).fadeToggle(1000)
+                $(correctChoice).fadeToggle(750).fadeToggle(900).fadeToggle(750).fadeToggle(1000)
                 correct++
             }
             else{
                 $(this).css("color","rgb(255, 87, 112)")
                 console.log("incorrect")
                 var correctChoice = ".li-"+q.correct
-                $(correctChoice).fadeToggle(1000).fadeToggle(1000).fadeToggle(1000).fadeToggle(1000)
+                $(correctChoice).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400)
                 incorrect++
             }
             newQues = setTimeout(load, 4100)   

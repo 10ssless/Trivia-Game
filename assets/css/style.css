@@ -12,16 +12,41 @@ body {
     /* letter-spacing: 1px; */
 }
 
+.bar {
+    background: rgb(182, 182, 182);
+    box-shadow: 5px 5px 0px rgba(121, 62, 62, 0.482);
+    padding-left: 4px;
+    transition-property: color,box-shadow;
+    transition-duration: .9s;
+}
+
+.bar-items {
+    margin-right: 1px;
+}
+
+.bar:hover {
+    color:rgb(255, 26, 75);
+    box-shadow: 0px 0px 0px rgba(121, 62, 62, 0.482);
+}
+
+.i {
+    color:rgb(255, 26, 75);
+}
+
 .game {
-    background: rgb(164, 164, 164);
+    background: rgb(171, 171, 171);
     padding: 10px 30px 20px 30px;
     box-shadow: 15px 15px 0px rgba(121, 62, 62, 0.4);
+
 }
+
+
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    
 
 }
 
@@ -34,7 +59,8 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    text-decoration: underline
+    text-decoration: underline;
+    word-spacing: 2px;
     /* border-bottom: 2px solid black; */
     /* width: 400px; */
 }
@@ -48,6 +74,9 @@ ul{
 
 li {
     padding-left: 42%; 
+    box-shadow: 0px 0px 0px rgba(114, 113, 113, 0.4);
+    transition-property: box-shadow;
+    transition-duration: .9s;
 
 }
 
@@ -59,15 +88,18 @@ li {
 
 li:hover {
     background: lightgray;
+    box-shadow: 5px 5px 0px rgba(114, 113, 113, 0.4);
 }
 
 li:active{
     /* color: rgb(0, 174, 130); */
     color: rgb(255, 87, 112);
     /* background: rgb(0, 142, 106); */
+    box-shadow: 5px 5px 0px rgba(114, 113, 113, 0.4);
 }
 li:focus{
     
+    box-shadow: 5px 5px 0px rgba(114, 113, 113, 0.4);
     color: rgb(0, 174, 130);
 }
 
@@ -81,19 +113,28 @@ li:focus{
 .start-btn {
     background: lightgray;
     margin: 90px 110px 130px 110px;
+    box-shadow: 5px 5px 0px rgba(114, 113, 113, 0.4);
+    transition-property: box-shadow;
+    transition-duration: .9s;
+    
 }
 
 .restart-btn {
     background: lightgray;
     margin: 30px 10px 30px 10px;
+
 }
 
 .start-btn:hover {
     background: white;
+    /* color: rgb(52, 52, 52); */
+    box-shadow: 0px 0px 0px rgba(114, 113, 113, 0.4);
 }
 
 .restart-btn:hover {
     background: white;
+    /* color: rgb(114, 113, 113); */
+   box-shadow: 0px 0px 0px rgba(114, 113, 113, 0.4);
 }
 
 .timer {
