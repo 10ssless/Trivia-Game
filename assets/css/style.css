@@ -33,11 +33,11 @@ body {
     color:rgb(255, 26, 75);
 }
 
-.game {
+.game{
     background: rgb(171, 171, 171);
     padding: 10px 30px 20px 30px;
     box-shadow: 15px 15px 0px rgba(121, 62, 62, 0.4);
-
+    font-size: 21px;
 }
 
 
@@ -56,6 +56,8 @@ h1 {
 }
 
 .question{
+    margin-left:6%;
+    margin-right:5%;
     text-align: center;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -67,13 +69,15 @@ h1 {
 
 ul{
     list-style-type: none;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:5%;
+    margin-right:5%;
     margin-bottom:75px;
 }
 
 li {
-    padding-left: 42%; 
+    margin-left:5%;
+    margin-right:5%;
+    padding-left: 39%; 
     box-shadow: 0px 0px 0px rgba(114, 113, 113, 0.4);
     transition-property: box-shadow;
     transition-duration: .9s;
@@ -122,6 +126,9 @@ li:focus{
 .restart-btn {
     background: lightgray;
     margin: 30px 10px 30px 10px;
+    box-shadow: 5px 5px 0px rgba(114, 113, 113, 0.4);
+    transition-property: box-shadow;
+    transition-duration: .9s;
 
 }
 
@@ -139,8 +146,13 @@ li:focus{
 
 .timer {
     position: absolute;
-    right: 1px;
-    bottom: -70px;
+    right: -31px;
+    bottom: -370px;
+    padding: 7px 26px 7px 26px;
+    /* border: 7px solid white; */
+    font-size: 33px;
+    background: rgb(171, 171, 171);
+    box-shadow: 10px 10px 0px rgba(121, 62, 62, 0.4);
 }
 
 .time-left {
