@@ -7,7 +7,7 @@ var q1 = {
     correct: "b"
 }
 var q2 = {
-    question: "Which player was dubbed the 'US Secretary of Defense' during the 2014 Men's World Cup?",
+    question: "Which player was dubbed the 'Secretary of Defense' during the 2014 Men's World Cup?",
     a: "Guillermo Ochoa",
     b: "Manuel Neuer",
     c: "Tim Howard",

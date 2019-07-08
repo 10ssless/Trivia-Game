@@ -146,13 +146,13 @@ li:focus{
 
 .timer {
     position: absolute;
-    right: -31px;
+    right: -28px;
     bottom: -370px;
     padding: 7px 26px 7px 26px;
     /* border: 7px solid white; */
     font-size: 33px;
     background: rgb(171, 171, 171);
-    box-shadow: 10px 10px 0px rgba(121, 62, 62, 0.4);
+    box-shadow: 7px 7px 0px rgba(121, 62, 62, 0.4);
 }
 
 .time-left {
