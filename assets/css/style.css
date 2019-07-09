@@ -155,6 +155,8 @@ li:focus{
     font-size: 33px;
     background: rgb(171, 171, 171);
     box-shadow: 7px 7px 0px rgba(121, 62, 62, 0.4);
+    transition-property: color,box-shadow;
+    transition-duration: .9s;
 }
 
 .time-left {

@@ -116,6 +116,7 @@ $(document).ready(function(){
 
             time = 30                           // reset timer
             $(".time-left").text(timeConverter(time))
+            $(".timer").css("color", "black")
             clearInterval(qTimer)
             qTimer = setInterval(count, 1000)
             choiceLock = false                  // unlock answer select
@@ -165,6 +166,7 @@ $(document).ready(function(){
     }
     function noAnswer(){
         clearInterval(qTimer)
+        $(".timer").css("color", "rgb(255, 26, 75)")
         console.log("no answer")
         var correctChoice = ".li-" + q.correct
         $(correctChoice).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400)
@@ -178,9 +180,6 @@ $(document).ready(function(){
         $(".game-content").show()  
         qList = [...questions]                   // create temp list of questions 
         load()                                   // call custom load() function to load html
-        
-
-
     })
 
     $("li").click(function(){
