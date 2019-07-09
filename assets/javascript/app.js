@@ -55,41 +55,53 @@ each question-answer is an obj
 var qTimer;
 var time = 30;
 var choiceLock = false;
-var newQues;
+var timeUp;
 var q;
 var qList;
+var reload;
+var newQues;
 
-window.onload = function(){
+$(document).ready(function(){
     $(".game-content").hide()   //hide q&a html
     $(".result").hide()
     
 
     function load(){
+        // console.log("qList " + qList.length)
+        console.log("time left "+time)
+        timeUp = setTimeout(noAnswer, 31000)
+
         if(qList.length > 0){
-            console.log("load correctly")
-            // q = qList[Math.floor(Math.random() * qList.length)]   
+            console.log("load successful") 
             q = qList[qList.length - 1]        // pick question from temp list
             qList.pop(q)                       // remove question from temp list after use
+
             $(".question").text(q.question)    // load questions & answers into html
             $(".choice-a").text(q.a)            
             $(".choice-b").text(q.b)
             $(".choice-c").text(q.c)
             $(".choice-d").text(q.d)
             $("li").css("color","black")
+
             time = 30                           // reset timer
             $(".time-left").text(timeConverter(time))
             clearInterval(qTimer)
             qTimer = setInterval(count, 1000)
             choiceLock = false                  // unlock answer select
         }
+
         else {
-            console.log("load wrong")
+            console.log("game over")
             $(".game-content").hide()
             $(".result").show()
             $(".question").text("Results")
             $(".correct").text(correct)
             $(".incorrect").text(incorrect)
             $(".unanswered").text(unanswered)
+            correct = 0                         // reset scores
+            incorrect = 0
+            unanswered = 0
+            
         }
     }
     function timeConverter(t) {
@@ -120,15 +132,22 @@ window.onload = function(){
             return false
         }
     }
+    function noAnswer(){
+        clearInterval(qTimer)
+        console.log("no answer")
+        var correctChoice = ".li-" + q.correct
+        $(correctChoice).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400)
+        unanswered++
+        var reload = setTimeout(load, 3200)
+    }
     
     $(".start-btn").click(function(){
         $(".start-btn").hide()
         $(".result").hide()
         $(".game-content").show()  
-        qList = questions                   // create temp list of questions 
-        console.log(qList.length)
-        load()
-        // newQues = setTimeout(load, 15000)
+        qList = [...questions]                   // create temp list of questions 
+        load()                                   // call custom load() function to load html
+        
 
 
     })
@@ -136,6 +155,7 @@ window.onload = function(){
     $("li").click(function(){
         if(!choiceLock){
             choiceLock = true
+            clearTimeout(timeUp)
             clearInterval(qTimer)
             var select = $(this).text()
             if(check(q,select)){
@@ -161,8 +181,7 @@ window.onload = function(){
         $(".start-btn").hide()
         $(".result").hide()
         $(".game-content").show()
-        qList = questions                   // create temp list of questions 
-        console.log(qList.length)
+        qList = [...questions]              // create temp list of questions 
         load()
     })
     
@@ -170,4 +189,4 @@ window.onload = function(){
 
 
 
-}
+})
