@@ -30,8 +30,40 @@ var q4 = {
     d: "1-0",
     correct: "b"
 }
+var q5 = {
+    question: "What does FIFA stand for?",
+    a: "International Federation of Football Association",
+    b: "Federación Internacional de la Asociación de Fútbol",
+    c: "Football Is F**king Awesome",
+    d: "Fédération Internationale de Football Association",
+    correct: "d"
+}
+var q6 = {
+    question: "Which country has played in every World Cup?",
+    a: "Argentina",
+    b: "Brazil",
+    c: "England",
+    d: "Spain",
+    correct: "b"
+}
+var q7 = {
+    question: "Which player has the record for most goals scored at the World Cup?",
+    a: "Pelé",
+    b: "Gerd Müller",
+    c: "Ronaldo",
+    d: "Miroslav Klose",
+    correct: "d"
+}
+var q8 = {
+    question: "Which company makes the official ball for the World Cup?",
+    a: "Puma",
+    b: "Nike",
+    c: "Adidas",
+    d: "Umbro",
+    correct: "c"
+}
 
-var questions = [q1,q2,q3,q4]
+var questions = [q6,q2,q8,q4,q1,q7,q3,q5]
 
 var correct = 0
 var incorrect = 0
@@ -68,7 +100,6 @@ $(document).ready(function(){
 
     function load(){
         // console.log("qList " + qList.length)
-        
         if(qList.length > 0){
             console.log("time left "+time)
             timeUp = setTimeout(noAnswer, 31000)
@@ -172,7 +203,7 @@ $(document).ready(function(){
                 $(correctChoice).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400).fadeToggle(400)
                 incorrect++
             }
-            newQues = setTimeout(load, 4100)   
+            newQues = setTimeout(load, 3200)   
         }
     })
 

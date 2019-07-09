@@ -56,7 +56,7 @@ h1 {
 }
 
 .question{
-    margin-left:6%;
+    margin-left:5%;
     margin-right:5%;
     text-align: center;
     margin-bottom: 20px;
@@ -67,17 +67,19 @@ h1 {
     /* width: 400px; */
 }
 
+
 ul{
     list-style-type: none;
-    margin-left:5%;
+    margin-left:0px;
     margin-right:5%;
     margin-bottom:75px;
+    /* padding-left:0px; */
 }
 
 li {
+    padding-left: 22%; 
     margin-left:5%;
     margin-right:5%;
-    padding-left: 39%; 
     box-shadow: 0px 0px 0px rgba(114, 113, 113, 0.4);
     transition-property: box-shadow;
     transition-duration: .9s;
