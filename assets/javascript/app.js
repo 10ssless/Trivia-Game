@@ -68,10 +68,10 @@ $(document).ready(function(){
 
     function load(){
         // console.log("qList " + qList.length)
-        console.log("time left "+time)
-        timeUp = setTimeout(noAnswer, 31000)
-
+        
         if(qList.length > 0){
+            console.log("time left "+time)
+            timeUp = setTimeout(noAnswer, 31000)
             console.log("load successful") 
             q = qList[qList.length - 1]        // pick question from temp list
             qList.pop(q)                       // remove question from temp list after use
@@ -162,7 +162,7 @@ $(document).ready(function(){
                 $(this).css("color", "rgb(0, 174, 130)")
                 console.log("correct")
                 var correctChoice = ".li-" + q.correct
-                $(correctChoice).fadeToggle(750).fadeToggle(900).fadeToggle(750).fadeToggle(1000)
+                $(correctChoice).fadeToggle(700).fadeToggle(900).fadeToggle(700).fadeToggle(900)
                 correct++
             }
             else{
